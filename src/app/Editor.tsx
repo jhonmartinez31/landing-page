@@ -283,7 +283,7 @@ export function Editor({ id }: { id: string }) {
           </div>
           <div className={`ide-stage${deviceWidth ? ' device' : ''}${scale < 1 ? ' scaled' : ''}`} ref={stageRef}>
             {/* Sin allow-same-origin: el código editado no puede tocar la app. */}
-            <iframe title="Vista previa de la landing" sandbox="allow-scripts" srcDoc={preview} style={frameStyle} />
+            <iframe title="Vista previa de la landing" sandbox="allow-scripts allow-forms" srcDoc={preview} style={frameStyle} />
           </div>
         </section>
       </div>

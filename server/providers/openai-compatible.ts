@@ -93,9 +93,11 @@ export function createOpenAICompatibleProvider(config: OpenAICompatibleConfig): 
       }
 
       const detail = (await res.text()).slice(0, 500);
-      const noQuota = res.status === 429 && /limit:\s*0\b/.test(detail);
-      if (RETRYABLE.has(res.status) && !noQuota && attempt < retries) {
-        const wait = Math.min(retryAfterMs(res) ?? RETRY_DELAYS_MS[attempt], MAX_RETRY_AFTER_MS);
+      const noQuota = res.status === 429 && (/limit:\s*0\b/i.test(detail) || /quota exceeded/i.test(detail) || /resource_exhausted/i.test(detail));
+      const retryAfter = retryAfterMs(res);
+      const tooLongWait = retryAfter !== undefined && retryAfter > 10_000;
+      if (RETRYABLE.has(res.status) && !noQuota && !tooLongWait && attempt < retries) {
+        const wait = Math.min(retryAfter ?? RETRY_DELAYS_MS[attempt], MAX_RETRY_AFTER_MS);
         console.warn(`[${config.id}] ${model} respondió ${res.status}; reintento ${attempt + 1} en ${wait / 1000}s`);
         await sleep(wait, signal);
         continue;

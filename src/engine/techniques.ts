@@ -25,62 +25,62 @@ export const TECHNIQUES: Technique[] = [
   {
     id: 'seed',
     name: 'Cadenas semilla',
-    summary: 'Ancla el diseño a un estilo ajeno al sector (Bauhaus, editorial de los 70, brutalismo…) para no parecer una plantilla.',
+    summary: 'Ancla el diseño a un estilo visual refinado (editorial suizo, brutalismo suave, minimalismo nórdico…) para un acabado de alta gama.',
     directive:
-      'Cadena semilla: en "Diseño" elige una cadena semilla explícita que mezcle dos referencias ajenas al sector (una disciplina, época o movimiento artístico). Nómbrala tal cual y deriva de ella la retícula, la paleta, la tipografía y la composición del hero. Prohíbe expresamente el layout genérico (texto a la izquierda e imagen a la derecha, bento grids, degradados morados).',
+      'Cadena semilla: en "Dirección de diseño" elige una referencia estética concreta (como diseño editorial suizo, minimalismo escandinavo o Bauhaus moderno). Nómbrala y deriva de ella la retícula, la paleta de colores sofisticada, la tipografía y la composición del hero.',
   },
   {
     id: 'ambitious',
     name: 'Prompt ambicioso',
-    summary: 'Define la psicología del visitante, la sofisticación del mercado y el objetivo de cada bloque del scroll.',
+    summary: 'Estructura una landing rica y profunda con copywriting persuasivo, abordando objeciones en cada sección del scroll.',
     directive:
-      'Prompt ambicioso: indica el nivel de sofisticación del mercado y los sesgos cognitivos a usar (con ética). En "Estructura de la página", detalla para cada sección: objetivo psicológico, emoción buscada, fricción que elimina, titular, copy principal, elemento visual de apoyo y la micro-conversión o CTA concreto.',
+      'Prompt ambicioso: define la psicología del cliente ideal y las objeciones clave a derribar. En "Estructura detallada de la página", especifica para cada sección el objetivo persuasivo, titular, copy de alto valor, elementos visuales/fotográficos y micro-conversiones.',
   },
   {
     id: 'critic',
     name: 'Agente crítico',
-    summary: 'Tras construir la landing, un segundo agente la audita (UX, accesibilidad, persuasión) y la corrige.',
+    summary: 'Tras construir la landing, un auditor sénior la revisa y pule (UX, accesibilidad, diseño visual y conversión).',
     directive:
-      'Agente crítico: añade al final de "Reglas" una lista de verificación de 6 a 8 criterios comprobables (UX, accesibilidad, persuasión, claridad del beneficio en menos de 3 segundos) que un revisor usará para auditar la landing construida.',
+      'Agente crítico: añade una lista de verificación de criterios de auditoría (UX moderna, riqueza de contenido, fotos reales con alt, contraste AA, interactividad en widgets y persuasión de titulares) para asegurar un acabado de clase mundial.',
   },
   {
     id: 'images',
-    name: 'Imágenes generadas',
-    summary: 'Sustituye las fotos de stock por ilustraciones SVG propias y deja listos los prompts para Midjourney o DALL·E.',
+    name: 'Fotografía de Alto Impacto & Mockups',
+    summary: 'Integra fotografías reales de alta definición (Unsplash CDN) y elementos visuales protagonistas según el sector.',
     directive:
-      'Imágenes generadas: define un estilo de ilustración coherente con la paleta y la tipografía. Para cada imagen que necesite la página, describe la ilustración SVG o la textura CSS que la sustituye y escribe también un prompt en inglés para un generador de imágenes (sujeto, material, luz, paleta, lente, relación de aspecto) que la página dejará en un comentario HTML junto al marcador.',
+      'Fotografía de alto impacto: especifica las fotografías reales de Unsplash que deben ilustrar el Hero, las características en layout alternado y los avatares fotográficos de los testimonios, con estilos modernos de bordes, sombras y etiquetas alt descriptivas.',
   },
   {
     id: 'video',
-    name: 'Vídeo y movimiento',
-    summary: 'Añade una capa de motion design que guía la mirada hacia la conversión, y el prompt para generar un vídeo de fondo.',
+    name: 'Vídeo y micro-interacciones',
+    summary: 'Añade transiciones fluidas, animaciones CSS refinadas y widgets interactivos que guían la mirada hacia la acción.',
     directive:
-      'Vídeo y movimiento: diseña una capa de motion con CSS (entradas, parallax suave o un fondo animado en el hero) que dirija la mirada hacia el CTA, siempre respetando prefers-reduced-motion. Escribe además un prompt en inglés para un generador de vídeo (Runway, Luma) para el fondo del hero: plano, movimiento de cámara, luz, sin texto ni personas; la página lo dejará en un comentario HTML.',
+      'Vídeo y micro-interacciones: diseña animaciones suaves con CSS (entradas fluidas, hover con levitación o glow sutil) respetando prefers-reduced-motion, e incluye widgets interactivos como toggle de precios y acordeón de FAQ.',
   },
   {
     id: 'subtractive',
-    name: 'Diseño sustractivo',
-    summary: 'Quita todo lo que no ayuda a convertir: menos secciones, menos campos, un solo camino hacia la acción.',
+    name: 'Diseño enfocado a la conversión',
+    summary: 'Elimina fricciones innecesarias y simplifica formularios para maximizar la tasa de conversión sin perder riqueza visual.',
     directive:
-      'Diseño sustractivo: limita la estructura a las secciones imprescindibles (justifica cada una por su aporte a la conversión), un único CTA principal repetido, navegación mínima o inexistente y formularios con el menor número de campos posible. Añade a "Reglas" que todo elemento decorativo que no ayude a entender la oferta se elimina.',
+      'Diseño enfocado: organiza la página con un camino claro hacia la conversión, formularios directos de baja fricción y llamadas a la acción prominentes y repetidas estratégicamente a lo largo de la página.',
   },
   {
     id: 'negative',
-    name: 'Restricciones negativas',
-    summary: 'Prohíbe los tics que delatan a la IA: palabras gastadas, sonrisas de stock, texturas plásticas.',
+    name: 'Restricciones de autenticidad',
+    summary: 'Elimina clichés de IA y lenguaje genérico: exige datos específicos, testimonios humanos y contenido verosímil.',
     directive:
-      'Restricciones negativas: añade a "Reglas" una lista de palabras y fórmulas prohibidas en el idioma de la página (p. ej. revolucionario, potenciar, ecosistema, innovador, soluciones integrales, desbloquea, lleva al siguiente nivel, sumérgete) y de clichés visuales prohibidos (degradados morados, glassmorphism gratuito, iconos genéricos en tarjetas de tres, personas sonriendo a cámara).',
+      'Restricciones de autenticidad: prohíbe frases vacías de IA (p. ej. "soluciones integrales 360", "ecosistema revolucionario", "lleva al siguiente nivel") y prohíbe maquetas vacías o esquemáticas: cada sección debe tener contenido real, específico, persuasivo y terminado.',
   },
   {
     id: 'human',
-    name: 'Redacción humana',
-    summary: 'Voz de marca con ritmo y matices locales: storytelling del problema y micro-copy que promete un beneficio.',
+    name: 'Redacción humana y empática',
+    summary: 'Copywriting con storytelling del problema del cliente, tono conversacional y botones con beneficio inmediato.',
     directive:
-      'Redacción humana: define en el Brief la voz de marca (cómo habla, qué nunca diría) con dos frases de ejemplo. Pide que el copy cuente primero la frustración del visitante y el alivio antes de las características, con ritmo variado y giros propios de la cultura local, y que cada botón use micro-copy que prometa un beneficio inmediato en lugar de "Enviar" o "Saber más".',
+      'Redacción humana: define una voz de marca empática y cercana. Redacta el copy abordando primero la frustración real del cliente antes de presentar las soluciones, con ritmo dinámico y botones con micro-copy específico que comunique valor inmediato.',
   },
 ];
 
-export const DEFAULT_RECOMMENDATION: TechniqueId[] = ['seed', 'ambitious', 'negative'];
+export const DEFAULT_RECOMMENDATION: TechniqueId[] = ['ambitious', 'images', 'human'];
 
 export function techniqueById(id: string): Technique | undefined {
   return TECHNIQUES.find((t) => t.id === id);

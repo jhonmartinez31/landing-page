@@ -66,7 +66,7 @@ export function LandingView({ id }: { id: string }) {
             ))}
             <div className={`card preview${fullscreen ? ' fullscreen' : ''}`}>
               <p className="label">Versión actual</p>
-              <iframe title="Vista previa de la landing" sandbox="allow-scripts" srcDoc={landing.html} />
+              <iframe title="Vista previa de la landing" sandbox="allow-scripts allow-forms" srcDoc={landing.html} />
               <div className="actions">
                 <button className="btn" onClick={() => navigate({ name: 'editor', id: landing.id })}>
                   Editar

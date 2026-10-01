@@ -814,7 +814,7 @@ export function Chat({ active }: { active: boolean }) {
               </div>
             </div>
 
-            <iframe title="Vista previa de la landing" sandbox="allow-scripts" srcDoc={html} />
+            <iframe title="Vista previa de la landing" sandbox="allow-scripts allow-forms" srcDoc={html} />
 
             <div className="actions preview-actions">
               <button className="btn btn-primary" onClick={download}>
